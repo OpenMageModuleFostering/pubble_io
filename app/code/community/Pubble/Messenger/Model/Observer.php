@@ -6,7 +6,7 @@
  * @package   Pubble_Messenger
  * @author    Pubble <ross@pubble.io>
  * @copyright 2016 Pubble (http://www.pubble.io)
- * @version   1.1.0
+ * @version   1.1.2
  */
 
 /**
@@ -48,13 +48,15 @@ class Pubble_Messenger_Model_Observer
             /** @var Mage_Core_Model_Layout $layout */
             /** @var Pubble_Messenger_Block_Script $pubble */
             $layout = Mage::app()->getLayout();
-            if ($layout && !Mage::app()->getRequest()->isPost()) {
+
+            if ($layout) {
                 $pubble = $layout->createBlock(self::BLOCK_NAME, self::BLOCK_ALIAS);
                 $pubble->setTemplate(self::BLOCK_TEMPLATE);
                 $layout->getBlock(self::BLOCK_TARGET)->append($pubble);
-
-                return $pubble;
             }
+            
+            return $pubble;
+
         } catch (Exception $e) {
             Mage::logException($e);
             return false;

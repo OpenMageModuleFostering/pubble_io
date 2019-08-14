@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Pubble_io</name>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/BSD-3-Clause">BSDL</license>
     <channel>community</channel>
@@ -9,11 +9,11 @@
     <summary>Easily install your Pubble messenger code on Magento via the admin configuration panel.</summary>
     <description>&lt;p&gt;Supports enabling/disabling the extension.&lt;/p&gt;&#xD;
 &lt;p&gt;Supports adding the messenger widget to your site by adding in the App ID and Identifier fields.&lt;/p&gt;</description>
-    <notes>Bug fix release to coincide with updates to loader.js</notes>
+    <notes>Removes Observer approach to adding the Pubble javascript and adds the script and html via layout XML instead.</notes>
     <authors><author><name>StudioForty9</name><user>SF9</user><email>info@studioforty9.com</email></author><author><name>Eoghan O'Brien</name><user>eoghanobrien</user><email>eoghan@eoghanobrien.com</email></author><author><name>Pubble</name><user>soleary</user><email>shane@pubble.co</email></author></authors>
-    <date>2016-05-26</date>
-    <time>22:41:46</time>
-    <contents><target name="magecommunity"><dir name="Pubble"><dir name="Messenger"><dir name="Block"><file name="Script.php" hash="a9e10c0429e4dd8727deb2896f5bd156"/></dir><dir name="Helper"><file name="Data.php" hash="f9f8e5fd410049d31d5b29313213e768"/></dir><dir name="Model"><file name="Observer.php" hash="be4de0a8f94e0567c7f905a659445138"/></dir><dir name="data"><dir name="pubble_messenger_setup"><file name="data-install-1.0.0.php" hash="fc5613da1937dd4047c05e6aced07583"/><file name="data-upgrade-1.0.0-1.1.0.php" hash="1f9b0d9f43fa30f6a03567cc775aaf85"/></dir></dir><dir name="etc"><file name="config.xml" hash="cced71628d9ccb4ebc85d7dda743a662"/><file name="system.xml" hash="148a3011f62260f83be52fe1a3818b3c"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="pubble"><file name="messenger" hash="d41d8cd98f00b204e9800998ecf8427e"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Pubble_Messenger.xml" hash="b4ad026649e3c24dc6059d70241e07e0"/></dir></target></contents>
+    <date>2016-05-27</date>
+    <time>00:24:45</time>
+    <contents><target name="magecommunity"><dir name="Pubble"><dir name="Messenger"><dir name="Block"><file name="Script.php" hash="ab6dab6741ce53d1bbc37f037014635e"/></dir><dir name="Helper"><file name="Data.php" hash="6b87aecab0f870936473b32f8839800b"/></dir><dir name="Model"><file name="Observer.php" hash="4f1f43c4dbfe3c438c45ede5652ca927"/></dir><dir name="data"><dir name="pubble_messenger_setup"><file name="data-install-1.0.0.php" hash="fc5613da1937dd4047c05e6aced07583"/><file name="data-upgrade-1.0.0-1.1.0.php" hash="1f9b0d9f43fa30f6a03567cc775aaf85"/></dir></dir><dir name="etc"><file name="config.xml" hash="2b1f4d1b30e43754debc8d4788da0e9f"/><file name="system.xml" hash="9492af746d38ab3f7e59907d97f60985"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="pubble"><file name="messenger" hash="d41d8cd98f00b204e9800998ecf8427e"/></dir></dir><dir name="layout"><file name="pubble_messenger.xml" hash="9210dde82a585466e81be10940ed5f86"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Pubble_Messenger.xml" hash="c45ad34b9b9717399a0ac60da3b233b4"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.00.00</min><max>7.99.99</max></php></required></dependencies>
 </package>
