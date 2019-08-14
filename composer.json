@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Pubble_io",
+    "type": "magento-module",
+    "license": "BSDL",
+    "homepage": "",
+    "description": "Easily install your Pubble messenger code on Magento via the admin configuration panel.",
+    "authors": [
+    {
+        "name": "StudioForty9",
+        "email": "info@studioforty9.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
