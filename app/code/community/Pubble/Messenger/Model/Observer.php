@@ -5,8 +5,8 @@
  * @category  Pubble
  * @package   Pubble_Messenger
  * @author    Pubble <ross@pubble.io>
- * @copyright 2015 Pubble (http://www.pubble.io)
- * @version   1.0.0
+ * @copyright 2016 Pubble (http://www.pubble.io)
+ * @version   1.1.0
  */
 
 /**
@@ -27,7 +27,7 @@ class Pubble_Messenger_Model_Observer
     const BLOCK_TEMPLATE = 'pubble/messenger/script.phtml';
     const BLOCK_TARGET   = 'before_body_end';
     /**#@-*/
-
+    
     /**
      * Add Pubble script to the footer.
      *
@@ -43,7 +43,7 @@ class Pubble_Messenger_Model_Observer
         if (! $this->_getHelper()->isEnabled()) {
             return $this;
         }
-
+        
         try {
             /** @var Mage_Core_Model_Layout $layout */
             /** @var Pubble_Messenger_Block_Script $pubble */
@@ -51,14 +51,14 @@ class Pubble_Messenger_Model_Observer
             $pubble = $layout->createBlock(self::BLOCK_NAME, self::BLOCK_ALIAS);
             $pubble->setTemplate(self::BLOCK_TEMPLATE);
             $layout->getBlock(self::BLOCK_TARGET)->append($pubble);
-
+            
             return $pubble;
         } catch (Exception $e) {
             Mage::logException($e);
             return false;
         }
     }
-
+    
     /**
      * Get an instance of the Pubble Data helper.
      *
